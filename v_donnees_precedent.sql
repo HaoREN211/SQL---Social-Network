@@ -38,4 +38,6 @@ UNION
   WHERE pgdate_part('y'::text, v_accounts.observation_date) = pgdate_part('y'::text, date_add('y'::text, -1::bigint, date_add('d'::text, -1::bigint, 'now'::text::date::timestamp without time zone)))
   GROUP BY v_accounts.campain_name, v_accounts.organisation_name, v_accounts.social_network_name, pgdate_part('y'::text, v_accounts.observation_date);
 
+GRANT SELECT, TRIGGER ON rs.v_donnees_precedent TO elipce_rs;
+
 COMMIT;
