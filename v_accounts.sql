@@ -41,4 +41,6 @@ AS
         END AS nb_account_followed, b_accounts.nb_account_talking_about, b_accounts.nb_account_comment, b_accounts.nb_post_viewed, b_accounts.nb_post_liked, b_accounts.nb_post_disliked, b_accounts.nb_post_shared, b_accounts.nb_post_comment, b_accounts.nb_post, b_accounts.nb_employee, b_accounts.observation_date
    FROM b_accounts;
 
+GRANT SELECT, TRIGGER ON rs.v_accounts TO elipce_rs;
+
 COMMIT;
